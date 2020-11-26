@@ -19,14 +19,13 @@ body {
 }
 
 body .main_top {
-  width: 45px;
-  height: 45px;
+  width: 35px;
+  height: 35px;
   text-align: center;
   background-color: rgba(10, 191, 222, 0.5);
   position: fixed;
   bottom: 3em;
-  right: 0em;
-  border-radius: 10px;
+  right: 15px;
   z-index: 100;
 }
 
@@ -35,22 +34,36 @@ body .main_top:hover {
 }
 
 body .main_top i {
-  font-size: 30px;
+  font-size: 25px;
   color: rgba(255, 255, 255, 0.7);
   margin-top: 5px;
 }
 
 body header {
+  width: 100%;
+  margin: 0;
   background-image: url("./images/background-01.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding: 3em 2em;
+  padding: 4em 0em;
+  position: relative;
+}
+
+body header .back {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 body header .navigation {
   background-color: #01546B;
   padding: 1em 0em;
+  position: relative;
+  z-index: 100;
 }
 
 body header .navigation .logo {
@@ -65,7 +78,6 @@ body header .navigation nav {
   position: relative;
   width: 90%;
   margin: 0em auto;
-  z-index: 20;
 }
 
 body header .navigation nav .menu {
@@ -85,7 +97,7 @@ body header .navigation nav .menu {
 body header .navigation nav ul {
   display: none;
   position: absolute;
-  top: 30px;
+  top: 18px;
   width: 100%;
   background-color: #ffffff;
   padding: 0.2em;
@@ -119,7 +131,10 @@ body header .navigation nav ul a:hover, body header .navigation nav ul li:hover 
 
 body header .header_text {
   margin: 10em 0em;
+  margin-left: 2em;
   color: #ffffff;
+  position: relative;
+  z-index: 100;
 }
 
 body header .header_text h2 {
@@ -204,8 +219,8 @@ body main .section1 .column .wrapper {
 }
 
 body main .section1 .column .wrapper .section1_icon {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   background-color: rgba(10, 198, 252, 0.2);
   border-radius: 50px;
   text-align: center;
@@ -214,7 +229,7 @@ body main .section1 .column .wrapper .section1_icon {
 }
 
 body main .section1 .column .wrapper .section1_icon i {
-  font-size: 25px;
+  font-size: 20px;
   color: #0AC6FC;
   margin-top: 12px;
   -webkit-transition: 1s;
@@ -222,13 +237,14 @@ body main .section1 .column .wrapper .section1_icon i {
 }
 
 body main .section1 .column div {
-  width: 80%;
+  width: 90%;
 }
 
 body main .section1 .column div p {
   color: #ffffff;
   display: block;
   margin: 0;
+  margin-left: 0.9em;
 }
 
 body main .section1 .column div p a {
@@ -375,7 +391,12 @@ body main .section3 .column1 {
   text-align: center;
 }
 
-body main .section3 .column1 h3, body main .section3 .column1 p {
+body main .section3 .column1 p {
+  font-size: 0.9em;
+  margin: 0;
+}
+
+body main .section3 .column1 h3 {
   margin: 0;
 }
 
@@ -409,10 +430,10 @@ body main .section3 .container_section3 .column3 p span {
   height: 28px;
   border-radius: 50px;
   text-align: center;
-  padding-top: 2px;
   margin-right: 8px;
   -webkit-transition: 500ms;
   transition: 500ms;
+  padding-top: 5px;
   cursor: pointer;
 }
 
@@ -457,7 +478,12 @@ body main .section4 .column1 {
   text-align: center;
 }
 
-body main .section4 .column1 h3, body main .section4 .column1 p {
+body main .section4 .column1 p {
+  font-size: 0.9em;
+  margin: 0;
+}
+
+body main .section4 .column1 h3 {
   margin: 0;
 }
 
@@ -473,6 +499,40 @@ body main .section4 .container_section4 .column {
   margin: 0em auto;
   margin-bottom: 2em;
   font-size: 1.2em;
+}
+
+body main .section4 .container_section4 .column div {
+  position: relative;
+}
+
+body main .section4 .container_section4 .column div a .thumbnmail {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body main .section4 .container_section4 .column div a .thumbnmail .fa-link {
+  display: none;
+  font-size: 40px;
+  color: #ffffff;
+}
+
+body main .section4 .container_section4 .column div a .thumbnmail:hover {
+  background-color: rgba(83, 215, 253, 0.3);
+}
+
+body main .section4 .container_section4 .column div a .thumbnmail:hover .fa-link {
+  display: block;
 }
 
 body main .section4 .container_section4 .column .dates {
@@ -526,17 +586,18 @@ body main .section5 .column1 .social_media {
 
 body main .section5 .column1 .social_media div {
   margin: 0.5em;
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   background-color: rgba(255, 255, 255, 0.2);
   padding: 10px;
   display: inline;
   -webkit-transition: 500ms;
   transition: 500ms;
+  text-align: center;
 }
 
 body main .section5 .column1 .social_media div i {
-  font-size: 20px;
+  font-size: 18px;
 }
 
 body main .section5 .column1 .social_media .facebook:hover {
@@ -570,7 +631,9 @@ body main .section5 .column2 h3 {
 
 body main .section5 .column2 p {
   color: #04BDFC;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+  border-bottom: 2px solid #1B657A;
 }
 
 body main .section5 .column2 p a {
@@ -643,22 +706,18 @@ body footer {
   body {
     font-size: 16px;
   }
-  body header {
-    background-image: url("./images/background-01.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    padding: 3em 2em;
-  }
   body header .navigation {
     background-color: #01546B;
-    padding: 1em 0em;
+    padding: 0.5em;
+    padding-bottom: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
+    width: 95%;
+    margin: 0em auto;
   }
   body header .navigation .logo {
     width: 50%;
@@ -667,7 +726,12 @@ body footer {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: normal;
     font-size: 1.5em;
+    padding: 0;
     padding-left: 25px;
+  }
+  body header .navigation .logo h2 {
+    margin: 0;
+    margin-top: 0.5em;
   }
   body header .navigation nav {
     width: 50%;
@@ -686,32 +750,35 @@ body footer {
   }
   body header .navigation nav ul {
     position: static;
-    width: 100%;
+    width: 90%;
     background-color: #01546B;
     padding: 0em;
+    padding-top: 1em;
     border: none;
     text-align: center;
     overflow-y: unset;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    margin: 0;
+    margin-left: 6em;
   }
   body header .navigation nav ul .fa {
     display: inline-block;
     width: 10px;
   }
-  body header .navigation nav ul div {
-    margin: 0em;
-    padding: 0em;
-    text-align: left;
-  }
   body header .navigation nav ul li {
     color: #000000;
     display: inline-block;
     padding-left: 0px;
+    margin: 0;
+    -webkit-transition: 300ms;
+    transition: 300ms;
   }
   body header .navigation nav ul a {
     color: #ffffff;
+    -webkit-transition: 300ms;
+    transition: 300ms;
   }
   body header .navigation nav ul .home {
     background-color: #01546B;
@@ -742,7 +809,7 @@ body footer {
     width: 190px;
     display: block;
     position: absolute;
-    top: 70px;
+    top: 50px;
     background-color: rgba(3, 177, 252, 0.4);
     padding: 10px;
   }
@@ -772,7 +839,7 @@ body footer {
     width: 190px;
     display: block;
     position: absolute;
-    top: 70px;
+    top: 50px;
     background-color: rgba(3, 177, 252, 0.4);
     padding: 10px;
   }
@@ -802,6 +869,7 @@ body footer {
   }
   body header .header_text {
     margin: 10em 0em;
+    margin-left: 2em;
     color: #ffffff;
     width: 50%;
   }

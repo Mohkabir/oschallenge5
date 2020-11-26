@@ -17,15 +17,16 @@ body{
   font-size: 14px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   
+  
   .main_top {
-    width: 45px;
-    height: 45px;
+    width: 35px;
+    height: 35px;
     text-align: center;
     background-color:rgba(10, 191, 222,0.5);
     position: fixed;
     bottom: 3em;
-    right: 0em;
-    border-radius: 10px;
+    right: 15px;
+   
     z-index: 100;
 
     &:hover{
@@ -33,20 +34,33 @@ body{
     }
 
     i {
-      font-size: 30px;
+      font-size: 25px;
       color: rgba(255, 255, 255, 0.7);
       margin-top: 5px;
     }
   }
   header{
+    width: 100%;
+    margin: 0;
     background-image: url('./images/background-01.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    padding: 3em 2em;
+    padding: 4em 0em;
+    position: relative;
+    .back{
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      background-color: rgba(0, 0, 0,0.6);
+    }
     .navigation{
       background-color: #01546B;
       padding: 1em 0em;
+      position: relative;
+      z-index: 100;
       .logo{
         width: 100%;
         text-align: center;
@@ -58,7 +72,6 @@ body{
         position: relative;
         width: 90%;
         margin: 0em auto;
-        z-index: 20;
 
         .menu {
           display: flex;
@@ -73,7 +86,7 @@ body{
         ul {
           display: none;
           position: absolute;
-          top: 30px;
+          top: 18px;
           width: 100%;
           background-color: #ffffff;
           padding: 0.2em;
@@ -104,7 +117,10 @@ body{
     }
     .header_text{
       margin: 10em 0em ;
+      margin-left: 2em;
       color: #ffffff;
+      position: relative;
+      z-index: 100;
       h2{
         font-family: Georgia,"Times New Roman",Times,serif;
         font-size: 2em;
@@ -117,9 +133,7 @@ body{
           width: 100px;
           padding: 9px 15px  7px;
           border-radius: 10px;
-          color: #ffffff;
-        
-       
+          color: #ffffff;   
         }
         .integer{
           background-color: #0AC6FC;
@@ -169,14 +183,14 @@ body{
         .wrapper{
           width: 20%;
           .section1_icon{
-            width: 50px;
-            height: 50px;
+            width: 40px;
+            height: 40px;
             background-color: rgba(10, 198, 252,0.2);
             border-radius: 50px;
             text-align: center;
             transition: 500ms;
             i{
-              font-size: 25px;
+              font-size: 20px;
               color: #0AC6FC;
               margin-top: 12px;
               transition: 1s;
@@ -184,11 +198,13 @@ body{
           }
         }
         div{
-          width: 80%;
+          width: 90%;
+          
           p{
             color: #ffffff;
             display: block;
             margin : 0;
+            margin-left: 0.9em;
             a{
               color:#0AC6FC ;
             }
@@ -311,7 +327,11 @@ body{
         width: 100%;
         padding: 4em 2.5em;
         text-align: center;
-        h3,p{
+        p{
+          font-size: 0.9em;
+          margin: 0;
+        }
+        h3{
           margin: 0;
         }
       }
@@ -340,9 +360,9 @@ body{
               height: 28px;
               border-radius: 50px;
               text-align: center;
-              padding-top: 2px;
               margin-right: 8px;
               transition: 500ms;
+              padding-top: 5px;
               cursor: pointer;
             }
           }
@@ -384,7 +404,11 @@ body{
         width: 100%;
         padding: 4em 2.5em;
         text-align: center;
-        h3,p{
+        p{
+          font-size: 0.9em;
+          margin: 0;
+        }
+        h3{
           margin: 0;
         }
       }
@@ -397,7 +421,33 @@ body{
           margin: 0em auto;
           margin-bottom: 2em;
           font-size: 1.2em;
+          
           div{
+            position: relative;
+            a{
+              .thumbnmail{
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .fa-link{
+                  display: none;
+                  font-size: 40px;
+                  color: #ffffff;
+                  
+                }
+                &:hover{
+                  background-color: rgba(83, 215, 253,0.3);
+                  .fa-link{
+                    display: block;
+                    
+                  }
+                }
+              }
+            }
             img{
   
             }
@@ -446,15 +496,16 @@ body{
           flex-wrap: wrap;
           div {
             margin: 0.5em;
-            width: 40px;
-            height: 40px;
+            width: 35px;
+            height: 35px;
             background-color: rgba(255, 255, 255, 0.2);
             padding: 10px;
             display: inline;
             transition: 500ms;
+            text-align: center;
   
             i{
-              font-size: 20px;
+              font-size: 18px;
             }
           }
   
@@ -499,7 +550,9 @@ body{
         }
         p{
           color: #04BDFC;
-          margin-bottom: 2em;
+          margin-bottom: 1em;
+          padding-bottom: 1em;
+          border-bottom: 2px solid #1B657A;
           a{
             color: #04BDFC;
           
