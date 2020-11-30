@@ -115,6 +115,10 @@ body header .navigation nav ul .fa {
   display: none;
 }
 
+body header .navigation nav ul .sub_dropdown {
+  display: none;
+}
+
 body header .navigation nav ul div {
   margin: 0em;
   padding: 0em;
