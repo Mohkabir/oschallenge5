@@ -228,7 +228,11 @@
               text-align: center;
               position: relative;
               transition: none;
-
+              li,a{
+                &:hover{
+                  background-color: #01546B;
+                }
+              }
             }
           }
 

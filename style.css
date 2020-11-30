@@ -920,6 +920,9 @@ body footer {
     -webkit-transition: none;
     transition: none;
   }
+  body header .navigation nav ul .link_text li:hover, body header .navigation nav ul .link_text a:hover {
+    background-color: #01546B;
+  }
   body header .header_text {
     margin: 10em 0em;
     margin-left: 2em;
